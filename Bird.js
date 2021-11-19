@@ -18,27 +18,30 @@ export class Bird extends Node {
     update(dt) {
         const c = this;
 
-        const forward = vec3.set(vec3.create(),
-            -Math.sin(c.rotation[1]), 0, -Math.cos(c.rotation[1]));
-        const right = vec3.set(vec3.create(),
-            Math.cos(c.rotation[1]), 0, -Math.sin(c.rotation[1]));
+        const forward = vec3.set(vec3.create(), -Math.sin(c.rotation[1]), 0, -Math.cos(c.rotation[1]));
 
+        const d = 0.015;
 
         // 1: add movement acceleration
         let acc = vec3.create();
         if (this.keys['KeyW']) {
-            vec3.add(acc, acc, forward);
+            this.translation[1] += d;
         }
+
         if (this.keys['KeyS']) {
-            vec3.sub(acc, acc, forward);
+            this.translation[1] -= d;
         }
+
         if (this.keys['KeyD']) {
-            vec3.add(acc, acc, right);
+            this.rotation[1] -= d; 
         }
+
         if (this.keys['KeyA']) {
-            vec3.sub(acc, acc, right);
+            this.rotation[1] += d; 
         }
+        //vec3.add(acc, acc, forward);
         // 2: update velocity
+        
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);
 
         // 3: if no movement, apply friction

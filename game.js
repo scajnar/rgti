@@ -66,10 +66,10 @@ class App extends Application {
         }
 
         if (document.pointerLockElement === this.canvas) {
-            this.camera.enable();
+            //this.camera.enable();
             this.bird.enable();
         } else {
-            this.camera.disable();
+            //this.camera.disable();
             this.bird.disable();
         }
     }
@@ -80,13 +80,8 @@ class App extends Application {
         this.startTime = this.time;
 
         if(this.bird) {
-            console.log(this.bird);
             this.bird.update(dt);
         }
-
-        // if (this.camera) {
-        //     this.camera.update(dt);
-        // }
 
         if (this.physics) {
             this.physics.update(dt);
@@ -96,7 +91,6 @@ class App extends Application {
     render() {
         if (this.scene) {
             this.renderer.render(this.scene, this.camera);
-            //console.log(this.scene);
         }
     }
 
