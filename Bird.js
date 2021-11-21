@@ -1,4 +1,5 @@
-import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
+import { vec3, mat4 } from './lib/gl-matrix-module.js';
+
 import { Node } from './Node.js';
 import { Utils } from './Utils.js';
 
@@ -23,6 +24,8 @@ export class Bird extends Node {
         const right = vec3.set(vec3.create(),
             Math.cos(c.rotation[1]), 0, -Math.sin(c.rotation[1]));
 
+        const up = vec3.set(vec3.create(),
+            Math.cos(2, 0, -2));  
 
         // 1: add movement acceleration
         let acc = vec3.create();
@@ -38,6 +41,10 @@ export class Bird extends Node {
         if (this.keys['KeyA']) {
             vec3.sub(acc, acc, right);
         }
+        if (this.keys['KeyF']) {
+            vec3.add(acc, acc, up);
+        }
+
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);
 
