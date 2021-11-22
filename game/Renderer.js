@@ -1,4 +1,4 @@
-import { mat4 } from '../../lib/gl-matrix-module.js';
+import { mat4 } from './lib/gl-matrix-module.js';
 
 import { WebGL } from '../../game/WebGL.js';
 

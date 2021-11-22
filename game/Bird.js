@@ -1,4 +1,5 @@
-import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
+import { vec3, mat4 } from './lib/gl-matrix-module.js';
+
 import { Node } from './Node.js';
 import { Utils } from '../../Utils.js';
 

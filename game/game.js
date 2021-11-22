@@ -1,4 +1,4 @@
-import { GUI } from '../../lib/dat.gui.module.js';
+import { GUI } from './lib/dat.gui.module.js';
 
 import { Application } from '../../common/App.js';
 
