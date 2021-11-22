@@ -43,6 +43,7 @@
         "type": "bird",
         "opis": "player",
         "mesh": 0,
+        "texture": 0,
         
         "aabb": {
           "min": [-1, -1, -1],
@@ -55,7 +56,7 @@
         "type": "model",
         "opis": "under",
         "mesh": 0,
-        "texture": 2,
+        "texture": 1,
         "aabb": {
           "min": [-1, -1, -1],
           "max": [1, 1, 1]
@@ -66,9 +67,22 @@
       },
       {
         "type": "model",
-        "opis": "back",
+        "opis": "over",
         "mesh": 0,
         "texture": 3,
+        "aabb": {
+          "min": [-1, -1, -1],
+          "max": [1, 1, 1]
+        },
+        "rotation": [0, 0, 0],
+        "translation": [0, 20, 0],
+        "scale": [30, 1, 30]
+      },
+      {
+        "type": "model",
+        "opis": "back",
+        "mesh": 0,
+        "texture": 2,
         "aabb": {
           "min": [-1, -1, -1],
           "max": [1, 1, 1]
@@ -81,7 +95,7 @@
         "type": "model",
         "opis": "front",
         "mesh": 0,
-        "texture": 3,
+        "texture": 2,
         "aabb": {
           "min": [-1, -1, -1],
           "max": [1, 1, 1]
@@ -94,7 +108,7 @@
         "type": "model",
         "opis": "right",
         "mesh": 0,
-        "texture": 3,
+        "texture": 2,
         "aabb": {
           "min": [-1, -1, -1],
           "max": [1, 1, 1]
@@ -107,7 +121,7 @@
         "type": "model",
         "opis": "left",
         "mesh": 0,
-        "texture": 3,
+        "texture": 2,
         "aabb": {
           "min": [-1, -1, -1],
           "max": [1, 1, 1]
@@ -119,9 +133,10 @@
     ],
     "textures": [
       "../../common/images/crate-diffuse.png",
-      "../../common/images/grass.png",
-      "../../common/images/grass.jpg",
-      "../../common/images/sky.png"
+      "../../common/images/grass1.jpg",
+      "../../common/images/sky.png",
+      "../../common/images/clouds.jpg"
+      
     ],
     "meshes": [
       "../../common/models/cube.json"

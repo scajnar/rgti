@@ -1,6 +1,6 @@
 import { GUI } from '../../lib/dat.gui.module.js';
 
-import { Application } from '../../common/engine/App.js';
+import { Application } from '../../common/App.js';
 
 import { Renderer } from './Renderer.js';
 import { Physics } from './Physics.js';
